@@ -263,23 +263,46 @@ The script includes comprehensive error handling:
 3. **Review**: Manually review translations for important content
 4. **Encoding**: Ensure .strings files use UTF-8 or UTF-16 encoding
 
-## 📂 File Structure
+## 📂 Project Structure
 
-- `ios_translator.py` - Main script file
-- `strings_parser.py` - Localizable.strings file parser
-- `translator.py` - Unified translator interface (backward compatible)
-- `translators/` - Modular translator implementations
-  - `base.py` - Translator base class
-  - `deepl_translator.py` - DeepL API implementation
-  - `llm_translator.py` - LLM API implementation  
-  - `mock_translator.py` - Test translator
-- `code_generator.py` - Swift/ObjC code generator
-- `config_manager.py` - Configuration manager ⭐
-- `setup_config.py` - Configuration setup tool ⭐
-- `env.example` / `config.py.example` - Configuration template files ⭐
-- `.gitignore` - Ignore sensitive configuration files ⭐
-- `SECURITY.md` - Security configuration guide ⭐
-- `requirements.txt` - Python dependencies list
+```
+AppleStringsTranslator/
+├── README.md                    # Main documentation (English)
+├── README_cn.md                 # Chinese documentation
+├── LICENSE                      # MIT License
+├── requirements.txt             # Python dependencies
+├── ios_translator.py            # Main script ⭐
+├── config.py                    # User configuration (auto-generated)
+├── .gitignore                   # Git ignore rules
+├── docs/                        # 📚 Documentation
+│   ├── QUICKSTART.md            # Quick start guide
+│   ├── SECURITY.md              # Security configuration
+│   ├── USAGE_EXAMPLES.md        # Detailed examples
+│   ├── OPENSOURCE_GUIDE.md      # Open source guide
+│   └── PROJECT_SUMMARY.md       # Project summary
+├── src/                         # 🔧 Source code
+│   ├── translator.py            # Translator interface
+│   ├── strings_parser.py        # .strings file parser
+│   ├── code_generator.py        # Swift/ObjC code generator
+│   ├── config_manager.py        # Configuration management
+│   └── translators/             # Translation implementations
+│       ├── base.py              # Base translator class
+│       ├── deepl_translator.py  # DeepL API
+│       ├── llm_translator.py    # LLM API ⭐
+│       └── mock_translator.py   # Testing translator
+├── examples/                    # 📝 Usage examples
+│   ├── example.py               # Basic usage example
+│   ├── demo_deepl.py            # DeepL demo
+│   └── demo_llm.py              # LLM demo ⭐
+├── tests/                       # 🧪 Test suite
+│   ├── test_functionality.py    # Functionality tests
+│   └── verify_setup.py          # Setup verification
+├── scripts/                     # 🛠️ Utility scripts
+│   └── setup_config.py          # Configuration setup
+└── config/                      # ⚙️ Configuration templates
+    ├── env.example              # Environment template
+    └── config.py.example        # Python config template
+```
 
 ## 📄 License
 

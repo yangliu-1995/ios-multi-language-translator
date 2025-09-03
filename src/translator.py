@@ -7,7 +7,7 @@ supporting the new modular translator structure.
 """
 
 # Import all translators from the new modular structure
-from translators import (
+from .translators import (
     TranslatorBase,
     DeepLTranslator, 
     MockTranslator,

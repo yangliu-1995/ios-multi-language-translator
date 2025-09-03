@@ -6,11 +6,14 @@ Functionality verification test script
 """
 
 import os
+import sys
 import tempfile
 import shutil
-from strings_parser import StringsParser
-from translator import create_translator
-from code_generator import LocalizationCodeGenerator
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.strings_parser import StringsParser
+from src.translator import create_translator
+from src.code_generator import LocalizationCodeGenerator
 
 
 def test_strings_parser():

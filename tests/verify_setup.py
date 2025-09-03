@@ -150,7 +150,7 @@ def test_code_generator():
     print("=" * 50)
     
     try:
-        from code_generator import LocalizationCodeGenerator
+        from src.code_generator import LocalizationCodeGenerator
         
         generator = LocalizationCodeGenerator()
         

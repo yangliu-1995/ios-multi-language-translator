@@ -5,7 +5,11 @@ DeepL API Demo Script
 Demonstrate how to use the new official DeepL library
 """
 
-from translator import create_translator
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.translator import create_translator
 
 
 def demo_deepl_translator():

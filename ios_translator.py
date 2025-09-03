@@ -11,10 +11,10 @@ import argparse
 import glob
 from typing import Dict, List, Set, Optional
 
-from strings_parser import StringsParser, get_language_from_lproj, get_deepl_language_code
-from translator import create_translator, TranslatorBase
-from code_generator import LocalizationCodeGenerator, generate_objc_header
-from config_manager import get_config
+from src.strings_parser import StringsParser, get_language_from_lproj, get_deepl_language_code
+from src.translator import create_translator, TranslatorBase
+from src.code_generator import LocalizationCodeGenerator, generate_objc_header
+from src.config_manager import get_config
 
 
 class iOSTranslator:

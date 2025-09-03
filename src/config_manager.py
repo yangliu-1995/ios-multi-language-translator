@@ -53,9 +53,9 @@ class ConfigManager:
             sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
             import config
             
-            # Update configuration with values from config.py
-            if hasattr(config, 'DEEPL_API_KEY'):
-                self.config['deepl_api_key'] = config.DEEPL_API_KEY
+                    # Update configuration with values from config.py
+        if hasattr(config, 'DEEPL_API_KEY') and config.DEEPL_API_KEY != 'your-deepl-api-key-here':
+            self.config['deepl_api_key'] = config.DEEPL_API_KEY
             
             if hasattr(config, 'LLM_CONFIG'):
                 llm_config = config.LLM_CONFIG

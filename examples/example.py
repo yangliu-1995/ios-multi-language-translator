@@ -6,8 +6,11 @@ Usage example for iOS translation script
 """
 
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from ios_translator import iOSTranslator
-from translator import create_translator
+from src.translator import create_translator
 
 
 def create_example_project():

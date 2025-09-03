@@ -6,7 +6,10 @@ Helps users set up configuration files for the iOS translator
 """
 
 import os
+import sys
 import shutil
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def setup_config():
@@ -15,11 +18,11 @@ def setup_config():
     print("🔧 iOS Translator Configuration Setup")
     print("=" * 50)
     
-    current_dir = os.path.dirname(os.path.abspath(__file__))
+    current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Go up to project root
     
     # Setup .env file
     env_file = os.path.join(current_dir, '.env')
-    env_example = os.path.join(current_dir, 'env.example')
+    env_example = os.path.join(current_dir, 'config', 'env.example')
     
     if not os.path.exists(env_file) and os.path.exists(env_example):
         print("📄 Creating .env file from template...")
@@ -33,7 +36,7 @@ def setup_config():
     
     # Setup config.py file
     config_file = os.path.join(current_dir, 'config.py')
-    config_example = os.path.join(current_dir, 'config.py.example')
+    config_example = os.path.join(current_dir, 'config', 'config.py.example')
     
     if not os.path.exists(config_file) and os.path.exists(config_example):
         print("\n📄 Creating config.py file from template...")

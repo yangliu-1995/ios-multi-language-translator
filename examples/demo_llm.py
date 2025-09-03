@@ -5,7 +5,11 @@ LLM Translator Demo Script
 Demonstrate how to use the new LLM translator
 """
 
-from translator import create_translator
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.translator import create_translator
 
 
 def demo_llm_translator():
