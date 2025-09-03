@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Configuration example file
+Copy this file to config.py and fill in your actual values
+"""
+
+# DeepL API Configuration
+DEEPL_API_KEY = "your-deepl-api-key-here"
+
+# LLM Configuration
+LLM_CONFIG = {
+    "api_url": "http://127.0.0.1:11434/api/generate",
+    "model": "mistral:latest",
+    "timeout": 60
+}
+
+# Translation Settings
+TRANSLATION_CONFIG = {
+    "default_translator": "deepl",  # deepl, llm, mock
+    "rate_limit_delay": 1.0,
+    "preserve_order": True
+}
+
+# Code Generation Settings
+CODE_GENERATION = {
+    "generate_swift": True,
+    "generate_objc": False,
+    "output_dir": None  # Will default to root_path if not specified
+}
