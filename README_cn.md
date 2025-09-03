@@ -318,9 +318,9 @@ python ios_translator.py /path/to/project --translator llm
 - `SECURITY.md` - 安全配置指南 ⭐
 - `requirements.txt` - Python依赖包列表
 
-## 许可证
+## 📄 许可证
 
-本项目遵循MIT许可证。
+本项目采用MIT许可证 - 详情请参阅 [LICENSE](LICENSE) 文件。
 
 ## 贡献
 
